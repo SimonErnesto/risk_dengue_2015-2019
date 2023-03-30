@@ -1,0 +1,53 @@
+digraph {
+	mu_i [label="mu_i
+~
+HalfNormal" shape=ellipse]
+	mu_t [label="mu_t
+~
+HalfNormal" shape=ellipse]
+	sd_t [label="sd_t
+~
+HalfNormal" shape=ellipse]
+	sd_i [label="sd_i
+~
+HalfNormal" shape=ellipse]
+	subgraph cluster99 {
+		I [label="I
+~
+LogNormal" shape=ellipse]
+		T [label="T
+~
+LogNormal" shape=ellipse]
+		Ri [label="Ri
+~
+Deterministic" shape=box]
+		Rn [label="Rn
+~
+Deterministic" shape=box]
+		Rp [label="Rp
+~
+Deterministic" shape=box]
+		y_t [label="y_t
+~
+Poisson" shape=ellipse style=filled]
+		y_i [label="y_i
+~
+Poisson" shape=ellipse style=filled]
+		R [label="R
+~
+Deterministic" shape=box]
+		label=99 labeljust=r labelloc=b style=rounded
+	}
+	mu_i -> I
+	sd_i -> I
+	mu_t -> T
+	sd_t -> T
+	I -> y_i
+	T -> y_t
+	I -> R
+	T -> R
+	I -> Ri
+	T -> Ri
+	Ri -> Rn
+	Ri -> Rp
+}
