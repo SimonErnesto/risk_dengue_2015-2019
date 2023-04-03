@@ -1,0 +1,31 @@
+digraph {
+	subgraph "cluster99 x 2" {
+		p [label="p
+~
+Dirichlet" shape=ellipse]
+		y [label="y
+~
+Multinomial" shape=ellipse style=filled]
+		label="99 x 2" labeljust=r labelloc=b style=rounded
+	}
+	subgraph cluster99 {
+		R [label="R
+~
+Deterministic" shape=box]
+		Rp [label="Rp
+~
+Deterministic" shape=box]
+		Rn [label="Rn
+~
+Deterministic" shape=box]
+		Ri [label="Ri
+~
+Deterministic" shape=box]
+		label=99 labeljust=r labelloc=b style=rounded
+	}
+	p -> y
+	p -> R
+	p -> Ri
+	Ri -> Rn
+	Ri -> Rp
+}

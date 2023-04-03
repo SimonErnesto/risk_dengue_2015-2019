@@ -5,7 +5,7 @@
 
 <h1> Model </h1>
 
-<p> The model simply samples the counts of infected passengers and total passengers from c...99 countries. thus, this is a simple Poisson model estimating uncertainty of infected and total passengers and later taking deterministic measures of ratio of infected passengers and risk. Poisson distributions for infected and total travellers are parametrised with Log-Normal distributions with Half-Normal hyperpriors for their means and standard deviations. This makes the model effectively hierarchical, i.e. it accounts for variation per country. </p> 
+<p> The model simply samples the counts of infected passengers and total passengers from c...99 countries. thus, this is a simple Poisson model estimating uncertainty of infected and total passengers and later taking deterministic measures of ratio of infected passengers and risk. Poisson distributions for infected and total travellers are parametrised with Log-Normal distributions with Half-Normal hyperpriors for their means and standard deviations. This makes the model effectively hierarchical, i.e. it accounts for variation per country. </p>
 
 <p align="center"> &mu;<sub>I</sub> ~ HalfNormal(1) </p>
 <p align="center"> &sigma;<sub>I</sub> ~ HalfNormal(1) </p>
@@ -46,6 +46,7 @@
 	<img src="proportional_risk.png" width="700" height="500" />
 <p>
 
+<p> As a checkup, we run a Multinomial model with Dirichlet priors (see multinomial_version folder). Results are equivalent to the Poisson model (as it should be expected). </p>
 
 <h1> Conclusion </h1>
 
